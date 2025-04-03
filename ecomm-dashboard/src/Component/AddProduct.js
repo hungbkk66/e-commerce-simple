@@ -6,6 +6,22 @@ function AddProduct() {
     const [file, setFile] = useState('');
     const [price, setPrice] = useState('');
     const [description, setDescription] = useState('');
+    async function addProduct() {
+        console.warn(name, file, price, description);
+        const formData = new FormData();
+        formData.append('file', file);
+        formData.append('name', name);
+        formData.append('price', price);
+        formData.append('description', description);
+        let result = await fetch("http://localhost:8000/api/addProduct", {
+            method: 'POST',
+            // headers: {
+            //     Authorization: `Bearer ${JSON.parse(localStorage.getItem('user-info')).token}`,
+            // },
+            body: formData
+        })
+        alert("data has been saved")
+    }
 
     return (
         <div>
@@ -24,7 +40,7 @@ function AddProduct() {
                 <input type='text' className='form-control'
                     onChange={(e) => setDescription(e.target.value)}
                     placeholder='description' /><br></br>
-                <button className='btn btn-primary'>Add</button>
+                <button onClick={addProduct} className='btn btn-primary'>Add</button>
             </div>
 
         </div>
