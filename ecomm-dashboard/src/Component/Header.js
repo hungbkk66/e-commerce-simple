@@ -23,6 +23,7 @@ function Header() {
                                 <Link to="/" >Product list </Link>
                                 <Link to="/add" >Add product </Link>
                                 <Link to="/update" > Update product </Link>
+                                <Link to="/search" > Search product </Link>
                             </>
                             :
                             <>

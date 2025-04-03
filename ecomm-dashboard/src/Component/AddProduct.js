@@ -20,7 +20,7 @@ function AddProduct() {
             // },
             body: formData
         })
-        alert("data has been saved")
+        alert("data has been add")
     }
 
     return (
