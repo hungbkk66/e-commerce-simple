@@ -11,6 +11,20 @@
   padding-left: 30px;
 }
 
+.delete {
+  background-color: red;
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.update {
+  background-color: green;
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
